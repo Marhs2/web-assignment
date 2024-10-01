@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML</title>
+  <link rel="stylesheet" href="./css/stlye.css" />
+</head>
+
+<body>
+  <header>
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+          d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z" />
+      </svg></a>
+    <nav>
+      <ul>
+        <li><a href="#">국내도서</a></li>
+        <li><a href="#">외국도서</a></li>
+        <li><a href="#">베스트셀러</a></li>
+        <li><a href="#">로그인</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="selecter">
+      <div class="select-stlye">
+        <div class="Genre">
+          <h2>책 장르</h2>
+          <div>
+            <div>
+              <input type="checkbox" name="fan" id="fan" />
+              <label for="fan">판타지</label>
+            </div>
+            <div>
+              <input type="checkbox" id="coding" />
+              <label for="coding">코딩</label>
+            </div>
+            <div>
+              <input type="checkbox" id="dis" />
+              <label for="dis">디스토피아</label>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <div class="book-stlye">
+            <h2>책 종류</h2>
+            <div>
+              <div>
+                <input type="radio" name="book" id="1" /><label for="1">소설</label>
+              </div>
+              <div>
+                <input type="radio" name="book" id="2" /><label for="2">만화</label>
+              </div>
+              <div>
+                <input type="radio" name="book" id="3" /><label for="3">글</label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="add-book">
+        <a href="#">책 추가하기</a>
+      </div>
+    </section>
+
+
+    <section class="books-content">
+      <div class="book-1 adven coding dis novel comic Writing">
+        <article>
+          <h2>해리포터</h2>
+          <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
+          <div class="price-about">
+            <p>가격: 10,000원</p>
+            <p>장르: 판타지</p>
+          </div>
+        </article>
+      </div>
+
+
+    </section>
+  </main>
+
+  <div class="layer">
+    <div>
+      <h1>책 추가</h1>
+      <article class="book-about">
+        <div>
+          <label for="book-name">책 이름</label>
+          <input type="text" id="book-name" name="book-name">
+        </div>
+        <div>
+          <label for="book-price">책 가격</label>
+          <input type="text" id="book-price">
+        </div>
+        <div>
+          <label for="book-gen">책 장르</label>
+          <input type="text" id="book-gen">
+        </div>
+      </article>
+      <button>추가</button>
+    </div>
+  </div>
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
