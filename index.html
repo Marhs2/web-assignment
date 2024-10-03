@@ -58,13 +58,13 @@
             <h2>책 종류</h2>
             <div>
               <div>
-                <input type="radio" name="book" id="1" /><label for="1">소설</label>
+                <input type="radio" name="book" id="radio-novel" /><label for="radio-novel">소설</label>
               </div>
               <div>
-                <input type="radio" name="book" id="2" /><label for="2">만화</label>
+                <input type="radio" name="book" id="radio-comic" /><label for="radio-comic">만화</label>
               </div>
               <div>
-                <input type="radio" name="book" id="3" /><label for="3">글</label>
+                <input type="radio" name="book" id="radio-Writing" /><label for="radio-Writing">글</label>
               </div>
             </div>
 
@@ -149,9 +149,26 @@
           <label for="book-price">책 가격</label>
           <input type="text" id="book-price">
         </div>
+
         <div>
           <label for="book-gen">책 장르</label>
-          <input type="text" id="book-gen">
+          <article class="add-book-gener">
+            <div>
+              <label for="adven-AddBook">판타지</label>
+              <input type="checkbox" id="adven-AddBook">
+            </div>
+
+            <div>
+              <label for="coding-AddBook">coding</label>
+              <input type="checkbox" id="coding-AddBook">  
+            </div>
+
+            <div>
+              <label for="dis-AddBook">디스토피아</label>
+              <input type="checkbox" id="dis-AddBook">  
+            </div>
+            </article>
+          
         </div>
       </article>
       <button class="add">추가</button>
