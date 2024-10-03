@@ -24,8 +24,6 @@ function Book_search_funtion() {
 }
 
 function BookStyleSelect() {
-  const $BookGen = $Bookstyle.children;
-  const $BookGenArr = Array.from($Bookstyle)
   // $BookGenArr.forEach((Gen) => {
   //   console.log(Gen.innerHTML);
   // });
@@ -73,9 +71,15 @@ function AddBook() {
         $BookName.value = null;
         $BookPrice.value = null;
 
+        Gener.childNodes[3].checked = false
+
         $Layer.style.display = "none";
 
+
+
       }
+
+      
 
     });
 
