@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+    <a href="#"><svg id="svg-id-0-nxid1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
         <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
         <path
           d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z" />
@@ -36,39 +36,22 @@
       <div class="select-stlye">
         <div class="Genre">
           <h2>책 장르</h2>
-          <div>
+          <div class="Gener-radio">
             <div>
-              <input type="checkbox" name="fan" id="fan" />
+              <input type="checkbox" class="adven" name="fan" id="fan" />
               <label for="fan">판타지</label>
             </div>
             <div>
-              <input type="checkbox" id="coding" />
+              <input type="checkbox" class="coding" id="coding" />
               <label for="coding">코딩</label>
             </div>
             <div>
-              <input type="checkbox" id="dis" />
+              <input type="checkbox" class="dis" id="dis" />
               <label for="dis">디스토피아</label>
             </div>
           </div>
 
         </div>
-
-        <div>
-          <div class="book-stlye">
-            <h2>책 종류</h2>
-            <div>
-              <div>
-                <input type="radio" name="book" id="radio-novel" /><label for="radio-novel">소설</label>
-              </div>
-              <div>
-                <input type="radio" name="book" id="radio-comic" /><label for="radio-comic">만화</label>
-              </div>
-              <div>
-                <input type="radio" name="book" id="radio-Writing" /><label for="radio-Writing">글</label>
-              </div>
-            </div>
-
-          </div>
         </div>
       </div>
       <div class="add-book">
@@ -78,7 +61,7 @@
 
 
     <section class="books-content">
-      <div class="book book-1 adven coding dis novel comic Writing">
+      <div class="book adven">
         <article>
           <h2 class="book-title">해리포터</h2>
           <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
@@ -89,7 +72,7 @@
         </article>
       </div>
 
-      <div class="book book-2 adven coding dis novel comic Writing">
+      <div class="book coding">
         <article>
           <h2 class="book-title">해리포터</h2>
           <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
@@ -100,7 +83,7 @@
         </article>
       </div>
 
-      <div class="book book-3 adven coding dis novel comic Writing">
+      <div class="book dis">
         <article>
           <h2 class="book-title">해리포터</h2>
           <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
@@ -111,7 +94,7 @@
         </article>
       </div>
 
-      <div class="book book-4 adven coding dis novel comic Writing">
+      <div class="book adven">
         <article>
           <h2 class="book-title">해리포터</h2>
           <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
@@ -122,7 +105,7 @@
         </article>
       </div>
 
-      <div class="book book-5 adven coding dis novel comic Writing">
+      <div class="book adven">
         <article>
           <h2 class="book-title">사마아</h2>
           <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
@@ -160,15 +143,14 @@
 
             <div>
               <label for="coding-AddBook">coding</label>
-              <input type="radio" name="book-Gener" id="coding-AddBook">  
+              <input type="radio" name="book-Gener" id="coding-AddBook">
             </div>
 
             <div>
               <label for="dis-AddBook">디스토피아</label>
-              <input type="radio" name="book-Gener" id="dis-AddBook">  
+              <input type="radio" name="book-Gener" id="dis-AddBook">
             </div>
-            </article>
-          
+          </article>
         </div>
       </article>
       <button class="add">추가</button>
