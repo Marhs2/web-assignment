@@ -48,7 +48,7 @@ nav > ul > li > a{
 
 nav > ul > li > a:before{
   content: '';
-  left: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
   width: 0;
@@ -59,6 +59,7 @@ nav > ul > li > a:before{
 
 nav > ul > li > a:hover:before{
   width: 100%;
+  left: 0;
 }
 
 .selecter{
@@ -195,7 +196,7 @@ main{
   justify-content: space-evenly;
 }
 
-.books-content > div > article >  a{
+.books-content a{
   display: block;
   height: 280px;
   width: 200px;
