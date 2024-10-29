@@ -11,17 +11,19 @@ function bookCreat() {
   $bookAddBtn.addEventListener('click', () => {
     $bookAddLayer.style.display = "flex"
   })
-  const $searchValue = $bookSearch.querySelector('#book-search')
   const $addBookPrice = $bookAddLayer.querySelector('#book-price')
   const $addBookName = $bookAddLayer.querySelector('#book-name')
   const $GenreArray = $bookAddLayer.querySelector('.add-book-gener')
   $bookAddLayer.children[0] .children[2].addEventListener('click', () => {
     const $newBook = document.createElement('div')
     $newBook.className = 'book'
-    if(!$addBookPrice.value.trim() || !$addBookName.value.trim()){return alert('이름과 가격을 써주세요 또는 장르를 골라주세요')}
-    
+    if(!$addBookPrice.value.trim() || !$addBookName.value.trim()){
+      return alert('이름과 가격을 써주세요 또는 장르를 골라주세요')
+    }
+          
       Array.from($GenreArray.children).forEach(gener => {
         if (gener.children[1].checked) {
+          
           $newBook.innerHTML = `
           <article>
             <h2 class="book-title">${$addBookName.value}</h2>
@@ -76,11 +78,9 @@ function bookSearch() {
     }
 
     $bookchild.forEach(books => {
+      const $bookName = books.querySelector('.book-title')
       // console.log($bookSearch.children[1].value == books.children[0].children[0].textContent ? "같음" : "다름");
-      books.style.display = 
-        $bookSearch.children[1].value == books.children[0].children[0].textContent 
-          ? 'flex'
-          : 'none'
+      books.style.display = $bookSearch.children[1].value == $bookName.textContent ? 'flex' : 'none'
     });
 
   })
