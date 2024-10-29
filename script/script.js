@@ -4,82 +4,85 @@ const $bookAddLayer = document.querySelector('.layer')
 const $bookSearch = document.querySelector('.book-search-section')
 const $GenerRadio = document.querySelector('.Gener-radio')
 
+// querySelector를 사용해서 미친놈 처럼 코딩을 안할수 있다
+// if(!$bookAddLayer.children[0].children[1].children[1].children[1].value.trim() || !$bookAddLayer.children[0].children[1].children[0].childNodes[3].value.trim()){
+
 function bookCreat() {
   $bookAddBtn.addEventListener('click', () => {
     $bookAddLayer.style.display = "flex"
   })
-  $bookAddLayer.children[0].children[2].addEventListener('click', () => {
+  const $searchValue = $bookSearch.querySelector('#book-search')
+  const $addBookPrice = $bookAddLayer.querySelector('#book-price')
+  const $addBookName = $bookAddLayer.querySelector('#book-name')
+  const $GenreArray = $bookAddLayer.querySelector('.add-book-gener')
+  $bookAddLayer.children[0] .children[2].addEventListener('click', () => {
     const $newBook = document.createElement('div')
     $newBook.className = 'book'
-    if(!$bookAddLayer.children[0].children[1].children[1].children[1].value.trim() || !$bookAddLayer.children[0].children[1].children[0].childNodes[3].value.trim()){
-      alert('장르를 골라주세요');        
-    }else{
-      Array.from($bookAddLayer.children[0].children[1].children[2].children[1].children).forEach(gener => {
+    if(!$addBookPrice.value.trim() || !$addBookName.value.trim()){return alert('이름과 가격을 써주세요 또는 장르를 골라주세요')}
+    
+      Array.from($GenreArray.children).forEach(gener => {
         if (gener.children[1].checked) {
           $newBook.innerHTML = `
           <article>
-            <h2 class="book-title">${$bookAddLayer.children[0].children[1].children[0].childNodes[3].value}</h2>
+            <h2 class="book-title">${$addBookName.value}</h2>
             <a href="#"><img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari"></a>
             <div class="price-about">
-              <p>가격: ${$bookAddLayer.children[0].children[1].children[1].children[1].value}원</p>
-              <span>장르: </span><span>${gener.children[0].textContent}</span>
+              <p>가격: ${$addBookPrice.value}원</p>
+              <span>장르: </span><span class="genreName">${gener.children[0].textContent}</span>
             </div>
           </article>`
+
   
-  
-  
-  
-          $bookAddLayer.children[0].children[1].children[0].childNodes[3].value = ""
-          $bookAddLayer.children[0].children[1].children[1].children[1].value = ""
+          $addBookName.value = ""
+          $addBookPrice.value = ""
           gener.children[1].checked = false
           $bookAddLayer.style.display = "none"
         }  
       });
   
 
+      $booksContent.appendChild($newBook)
     }
 
-    bookSearch() 
-    Genre()
-    $booksContent.appendChild($newBook)
-  })
+  )
 }
 
 function Genre() {
-  $GenArray = Array.from($GenerRadio.children)
   $GenerRadio.addEventListener('click', () => {
-    $GenArray.forEach(radio => {
+    const $bookChildren = Array.from($booksContent.children)
+    const $genArray = Array.from($GenerRadio.children)
+    $genArray.forEach(radio => {
       if (radio.children[0].checked) {
-        Array.from($booksContent.children).forEach(books => {
-          if(radio.children[1].innerHTML == books.children[0].children[2].children[2].innerHTML){
-            books.style.display = "flex"
-          }else{
-            books.style.display = "none"
-          }
+        $bookChildren.forEach(books => {
+          const $genreName = books.querySelector(".genreName")
+          books.style.display = radio.children[1].innerHTML == $genreName.textContent ? "flex" : "none"
         });  
       }
-
-      
-
     });
   })
 }
 
 function bookSearch() {
-  $bookchild = Array.from($booksContent.children)
+  // onclick 은 덥어쓰여질수 있다
+  // addEventListener 은 중첩된다 (싸인다)
 
   $bookSearch.children[1].addEventListener('keypress', (e) => {
-    if (e.keyCode == 13) {
-      $bookchild.forEach(books => {
-        if ($bookSearch.children[1].value == books.children[0].children[0].textContent) {
-          books.style.display = 'flex'
-        } else if (!$bookSearch.children[1].value.trim()) {
-          books.style.display = 'flex'
-        } else {
-          books.style.display = 'none'
-        }
-      });
+    const $bookchild = Array.from($booksContent.children)
+
+    if (e.key !== 'Enter') return;
+
+    if (!$bookSearch.children[1].value.trim()) {
+      return $bookchild.forEach(($book) => $book.style.display = 'flex');
     }
+
+    $bookchild.forEach(books => {
+      // console.log($bookSearch.children[1].value == books.children[0].children[0].textContent ? "같음" : "다름");
+      books.style.display = 
+        $bookSearch.children[1].value == books.children[0].children[0].textContent 
+          ? 'flex'
+          : 'none'
+    });
+
   })
 
 }
@@ -89,3 +92,7 @@ Genre()
 bookSearch()
 bookCreat()
 
+// TODO
+// 1. querySeletor로 미친 코딩 바꾼다
+// 2. Genre함수를 bookSearch 느낌으로 리펙토링
+// 3. Genre 메번 호출하는 방식이 아니라 한번 호출해서 끝네도록 리펙토링
