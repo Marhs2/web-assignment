@@ -19,11 +19,14 @@ header > a > svg{
 }
 
 
-
 header > a > svg > path{
   fill: #63E6BE;
 }
 
+
+body{
+  background-color: #f5faf2;
+}
 
 
 nav > ul{
@@ -150,6 +153,17 @@ nav > ul > li > a:hover:before{
   flex-direction: column;
 }
 
+.layer .close{
+  background-color: red;
+  color: white;
+  font-size: 20px;
+}
+
+.layer .close:hover{
+  background-color: rgb(247, 118, 118);
+  color: black;
+}
+
 
 .book-about > div{
   display: flex;
@@ -174,12 +188,14 @@ nav > ul > li > a:hover:before{
   margin: 5px;
   cursor: pointer;
   background-color: #63E6BE;
+  font-size: 20px;
   transition: .3s;
 }
 
 .layer button:hover{
   background-color: #7ec2ad;
 }
+
 
 
 /* ---------------- */
@@ -190,10 +206,11 @@ main{
 
 
 .books-content{
+  margin: 0 auto;
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 
 .books-content a{
@@ -215,7 +232,7 @@ main{
 }
 
 .books-content > div{
-  background-color: aliceblue;
+  background-color: rgb(180, 255, 178);
   width: 300px;
   height: 400px;
   padding: 10px;
@@ -233,6 +250,7 @@ main{
 .price-about{
   margin: 10px;
 }
+
 
 
 /* --------------------- */

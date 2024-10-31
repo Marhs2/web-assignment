@@ -1,9 +1,32 @@
-const $booksContent = document.querySelector('.books-content')
-const $bookAddBtn = document.querySelector('.add-book')
-const $bookAddLayer = document.querySelector('.layer')
-const $bookSearch = document.querySelector('.book-search-section')
-const $GenerRadio = document.querySelector('.Gener-radio')
+const $ = element => document.querySelector(element);
+const $$ = element => [...document.querySelectorAll(element)];
 
+/*
+ find:value
+ findIndex:number
+ map : array
+ forEach:void
+ filter:array
+ some:boolean
+ every :boolean
+ reduce : any
+ includes:boolean
+ with :void
+ at :value
+ join:string
+ indexOf :number
+ reverse:array
+ slice:array
+ sort:void , toSorted:array
+ splice:array
+*/
+
+const $booksContent = $('.books-content')
+const $bookAddBtn = $('.add-book')
+const $bookAddLayer = $('.layer')
+const $bookSearch = $('.book-search-section')
+const $GenerRadio = $('.Gener-radio')
+const $addLayerCloseBtn = $('.close')
 // querySelector를 사용해서 미친놈 처럼 코딩을 안할수 있다
 // if(!$bookAddLayer.children[0].children[1].children[1].children[1].value.trim() || !$bookAddLayer.children[0].children[1].children[0].childNodes[3].value.trim()){
 
@@ -14,13 +37,15 @@ function bookCreat() {
   const $addBookPrice = $bookAddLayer.querySelector('#book-price')
   const $addBookName = $bookAddLayer.querySelector('#book-name')
   const $GenreArray = $bookAddLayer.querySelector('.add-book-gener')
+  
   $bookAddLayer.children[0] .children[2].addEventListener('click', () => {
-    const $newBook = document.createElement('div')
-    $newBook.className = 'book'
     if(!$addBookPrice.value.trim() || !$addBookName.value.trim()){
       return alert('이름과 가격을 써주세요 또는 장르를 골라주세요')
     }
-          
+    
+    const $newBook = document.createElement('div')
+    $newBook.className = 'book'
+    
       Array.from($GenreArray.children).forEach(gener => {
         if (gener.children[1].checked) {
           
@@ -47,7 +72,21 @@ function bookCreat() {
     }
 
   )
+
+  $addLayerCloseBtn.addEventListener('click',()=>{
+    $bookAddLayer.style.display = "none"
+    Array.from($GenreArray.children).forEach(genre => {genre.children[1].checked = false});
+    $addBookName.value = ""
+    $addBookPrice.value = ""
+  })
+
 }
+
+function delBook(){
+  
+
+}
+
 
 function Genre() {
   $GenerRadio.addEventListener('click', () => {
