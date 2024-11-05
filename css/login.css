@@ -1,0 +1,118 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom:1px solid black ;
+}
+
+header > a > svg{
+  width: 100px;
+  height: 100px;
+}
+
+
+header > a > svg > path{
+  fill: #63E6BE;
+}
+
+
+body{
+  background-color: #f5faf2;
+}
+
+
+nav > ul{
+  margin-top: 5%;
+  display: flex;
+}
+
+nav > ul > li > a{
+  margin: 5px;
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+  transition: 1s ease-in-out;
+  position: relative;
+}
+
+
+
+nav > ul > li > a:before{
+  content: '';
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  position: absolute;
+  border-bottom: solid 2px #000;
+  transition: .3s;
+}
+
+nav > ul > li > a:hover:before{
+  width: 100%;
+  left: 0;
+}
+
+
+/* -------------------------------------- */
+
+.layer{
+  overflow: hidden;
+  display: flex;
+  width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+  margin: 5% auto;
+  border: 1px solid black;
+}
+
+
+.thrid-party img{
+  width: 50px;
+  height: 50px;
+}
+
+
+.login{
+  margin: 125px 0;
+  width: 50%;
+  padding: 10px;
+}
+
+.login  > div:nth-child(2) > div:nth-child(3) a{
+  display: block;
+  width: 100px;
+  border: 1px solid black;
+}  
+
+.ad img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login > div > div{
+  padding: 10px;
+}
+
+.login input{
+  width: 65%;
+  padding: 5px;
+  font-size: 20px;
+}
+
+
+
+
