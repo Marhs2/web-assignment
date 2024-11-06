@@ -15,46 +15,69 @@
       </svg></a>
     <nav>
       <ul>
-        <li><a href="#">국내도서</a></li>
+        <li><a href="../index.html">국내도서</a></li>
         <li><a href="#">외국도서</a></li>
         <li><a href="#">베스트셀러</a></li>
-        <li><a href="#">로그인</a></li>
+        <li><a href="../login/login.html">로그인</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="layer">
     <div class="login">
-      <div class="thrid-party">
-        <h1></h1>
-        <a href="#"><img src="../images/facebook_logo.png" alt=""facekbookLogo></a>
-        <a href="#"><img src="../images/google.webp" alt="googleLogo"></a>
-      </div>
-  
-      <div>
+        
+        
+        <div class="form">
+          <h1>로그인</h1>
+
+          <div>
+            <input type="email" id="email" placeholder="이메일 또는 아이디">
+          </div>
+          
+          <div>
+            <input type="password" id="psword" placeholder="비밀번호">
+          </div>
+    
+          <div>
+            <a href="#" class="loginBtn">로그인</a>
+          </div>
+          
+        </div>
+    </div>
+
+
+    
+
+    <div class="signin">
+      <div class="form">
+        <h1>회원가입</h1>
+        
         <div>
-          <input type="text" id="email">
-          <label for="email">이메일 또는 아이디</label>
+          <input type="email" id="signinemail" placeholder="이메일 또는 아이디">
         </div>
         
         <div>
-          <input type="email" id="email">
-          <label for="email">비밀번호</label>
+          <input type="password" id="signinpsword" placeholder="비밀번호">
         </div>
   
         <div>
-          <a href="#">로그인</a>
+          <a href="#" class="signinBtn">회원가입</a>
         </div>
-        
+
       </div>
     </div>
     
-
     <div class="ad">
-      <a href="https://www.kyobobook.co.kr/"><img src="../images/BookAd.jpeg" alt="bookAd"></a>
+      <a href="#"><img src="../images/BookAd.jpeg" alt="bookAd"></a>
     </div>
+
+
+    </div>
+
+
 
   </div>
 
+  <script src="./script/script.js"></script>
 </body>
 </html>

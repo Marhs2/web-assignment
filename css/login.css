@@ -69,50 +69,142 @@ nav > ul > li > a:hover:before{
 /* -------------------------------------- */
 
 .layer{
+  position: relative;
   overflow: hidden;
   display: flex;
   width: 1000px;
   height: 500px;
   border-radius: 10px;
   margin: 5% auto;
-  border: 1px solid black;
+  background-color: #ccf7b1;
 }
 
 
-.thrid-party img{
-  width: 50px;
-  height: 50px;
+.login h1, .signin h1{
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #333;
 }
 
 
-.login{
-  margin: 125px 0;
-  width: 50%;
-  padding: 10px;
+
+
+.login , .signin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 485px);
 }
 
-.login  > div:nth-child(2) > div:nth-child(3) a{
+.login > div , .signin > div{ 
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+
+.form{
+  margin-top: 10%;
+}
+
+.form a{
+  margin: 10% auto; 
+}
+
+.form a{
   display: block;
-  width: 100px;
-  border: 1px solid black;
+  padding: 10px;
+  width: 100px;  
+  text-align: center;
+  border-radius: 10px;
+  background-color: #a9ee7f;
+  transition: .3s;
 }  
 
+.form a:hover{
+  background-color: #c2ff9c;
+}  
+
+.ad{
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
 .ad img{
-  object-fit: cover;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .login > div > div{
   padding: 10px;
 }
 
-.login input{
-  width: 65%;
-  padding: 5px;
-  font-size: 20px;
+
+
+
+
+
+
+
+
+
+
+.login{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 
+
+.signin{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.ad{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.signin > div > div, .login > div > div{
+  padding: 10px;
+}
+
+.form{
+  margin-top: 0;
+}
+
+
+
+.signin input{
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 2px solid;
+  width: 100%;
+  padding: 5px;
+  font-size: 22px;
+}
+
+.login input{
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 2px solid;
+  width: 100%;
+  padding: 5px;
+  font-size: 22px;
+}
 
 
 
