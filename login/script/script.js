@@ -72,7 +72,11 @@ $signinBtn.addEventListener("click", () => {
     $userInformation = localStorage.getItem('user')
   
     localStorage.setItem("user", JSON.stringify(user));
+
+    alert("회원가입 성공!")
+    $signEmail.value = ""
   
+    $signPsw.value = ""
   }
 
 ``

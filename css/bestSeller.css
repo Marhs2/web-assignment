@@ -72,13 +72,20 @@ nav > ul > li > a:hover:before{
 .layer > div{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .layer > div > div{
+  background-color: #b5ffd2;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 800px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .layer > div > div > div{
   display: flex;
+  font-size: 20px;
 }
