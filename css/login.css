@@ -68,7 +68,9 @@ nav > ul > li > a:hover:before{
 
 /* -------------------------------------- */
 
+
 .layer{
+  opacity: 0.8;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -113,17 +115,16 @@ nav > ul > li > a:hover:before{
   margin: 10% auto; 
 }
 
-.form a{
+.form .btnDes{
   display: block;
   padding: 10px;
-  width: 100px;  
   text-align: center;
   border-radius: 10px;
   background-color: #a9ee7f;
   transition: .3s;
 }  
 
-.form a:hover{
+.form .btnDes:hover{
   background-color: #c2ff9c;
 }  
 
@@ -140,19 +141,16 @@ nav > ul > li > a:hover:before{
   object-fit: cover;
 }
 
+.ad a{
+  width: 100%;
+  height: 100%;
+  background-color: #ccf7b1;
+  display: block;
+}
+
 .login > div > div{
   padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .login{
   position: absolute;
@@ -208,3 +206,12 @@ nav > ul > li > a:hover:before{
 
 
 
+.gotosign{
+  text-decoration: underline;
+  color: blue;
+  margin-top: 0;
+}
+
+.gotosign:hover{
+  color: rgb(104, 104, 106);
+}

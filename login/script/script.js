@@ -8,6 +8,9 @@ const $signEmail = $("#signinemail");
 const $signPsw = $("#signinpsword");
 const $signinBtn = $(".signinBtn");
 
+const $slideToSign = $('.gotosign')
+const $slideToLogin = $('.gotologin')
+
 
 const $ad = $(".ad");
 
@@ -72,29 +75,28 @@ $signinBtn.addEventListener("click", () => {
   
   }
 
-
+``
 });
 
 
 let slide = 0;
 
-$ad.addEventListener("click", () => {
-  if (slide == 1) {
-    $ad.animate([{ transform: "translateX(0)" }], {
-      duration: 500,
-      fill: "forwards",
-    });
 
-    slide--;
-  } else {
-    console.log("0");
-    slide++;
-    $ad.animate([{ transform: "translateX(-500px)" }], {
-      duration: 500,
-      fill: "forwards",
-    });
-  }
-});
+
+
+$slideToSign.addEventListener('click',()=>{
+  $ad.animate([{ transform: "translateX(-500px)"}],  {
+    duration: 500,
+    fill: "forwards",})
+})
+
+$slideToLogin.addEventListener('click',()=>{
+  $ad.animate([{ transform: "translateX(0)"}], {
+    duration: 500,
+    fill: "forwards",})
+})
+
+
 
 // // 2. 객체를 JSON 문자열로 변환하여 저장
 // localStorage.setItem("user", JSON.stringify(user));

@@ -1,0 +1,84 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #333333;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  border-bottom:1px solid black ;
+}
+
+header > a > svg{
+  width: 100px;
+  height: 100px;
+}
+
+
+header > a > svg > path{
+  fill: #63E6BE;
+}
+
+
+body{
+  background-color: #f5faf2;
+}
+
+
+nav > ul{
+  margin-top: 5%;
+  display: flex;
+}
+
+nav > ul > li > a{
+  margin: 5px;
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 50px;
+  transition: 1s ease-in-out;
+  position: relative;
+}
+
+
+
+nav > ul > li > a:before{
+  content: '';
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  position: absolute;
+  border-bottom: solid 2px #000;
+  transition: .3s;
+}
+
+nav > ul > li > a:hover:before{
+  width: 100%;
+  left: 0;
+}
+
+
+/* --------------------------- */
+
+
+.layer > div{
+  display: flex;
+  flex-direction: column;
+}
+
+.layer > div > div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.layer > div > div > div{
+  display: flex;
+}
