@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../css/bestSeller.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베스트셀러 - 북스토어</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bestSeller.css">
+    <style>
+
+
+        :root {
+            --primary-color: #34d399;
+            --secondary-color: #a7f3d0;
+            --bg-color: #ecfdf5;
+            --text-color: #333;
+        }
+
+    </style>
 </head>
 <body>
   <header>
@@ -15,74 +27,71 @@
       </svg></a>
     <nav>
       <ul>
-        <li><a href="../index.html" onclick="location.href = 'index.html'" >도서</a></li>
+        <li><a href="../index.html">도서</a></li>
         <li><a href="../bestSeller/bestSeller.html">베스트셀러</a></li>
         <li><a href="../login/login.html">로그인</a></li>
       </ul>
     </nav>
   </header>
-
-  <div class="layer">
-    <div>
-      <div>
-        <div>
-          <h1>1등</h1>
-          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="haary">  
-        </div>
-        <div class="info">
-          <div class="title">해리포터: 뭐시기2</div>
-          <div class="price">10000원</div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <h1>2등</h1>
-          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="haary">
-        </div>
+    <main class="main-content">
+        <h1 class="bestseller-title">베스트셀러</h1>
         
-        <div class="info">
-          <div class="title">해리포터: 뭐시기</div>
-          <div class="price">10000원</div>
+        <div class="bestseller-list">
+            <div class="book-card">
+                <div class="rank">1</div>
+                <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="해리포터" class="book-image">
+                <div class="book-info">
+                    <h2 class="book-title">해리포터: 마법사의 돌</h2>
+                    <div class="price-tag">
+                        <i class="fas fa-tag"></i>
+                        <span class="book-price">21,000원</span>
+                    </div>
+                    <div class="book-details">
+                        <p>저자: J.K. 롤링</p>
+                        <p>출판사: 문학수첩</p>
+                        <p>출간일: 2023.12.01</p>
+                    </div>
+                </div>
+            </div>
 
-        </div>
-      </div>
-      <div>
-        <div>
-          <h1>3등</h1>
-          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="haary">
-        </div>
-        
-        <div class="info">
-          <div class="title">해리포터</div>
-          <div class="price">10000원</div>
-          
-        </div>
-      </div>
-      <div>
-        <div>
-          <h1>4등</h1>
-          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="haary">  
-        </div>
-        <div class="info">
-          <div class="title">사마아</div>
-          <div class="price">10000원</div>
+            <div class="book-card">
+                <div class="rank">2</div>
+                <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="해리포터" class="book-image">
+                <div class="book-info">
+                    <h2 class="book-title">해리포터: 비밀의 방</h2>
+                    <div class="price-tag">
+                        <i class="fas fa-tag"></i>
+                        <span class="book-price">10,000원</span>
+                    </div>
+                    <div class="book-details">
+                        <p>저자: J.K. 롤링</p>
+                        <p>출판사: 문학수첩</p>
+                        <p>출간일: 2023.12.15</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="book-card">
+                <div class="rank">3</div>
+                <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="해리포터" class="book-image">
+                <div class="book-info">
+                    <h2 class="book-title">해리포터: 아즈카반의 죄수</h2>
+                    <div class="price-tag">
+                        <i class="fas fa-tag"></i>
+                        <span class="book-price">10,000원</span>
+                    </div>
+                    <div class="book-details">
+                        <p>저자: J.K. 롤링</p>
+                        <p>출판사: 문학수첩</p>
+                        <p>출간일: 2024.01.01</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <h1>5등</h1>
-          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="haary">
-        </div>
-        <div class="info">
-          <div class="title">사마아</div>
-          <div class="price">10000원</div>
+    </main>
 
-        </div>
-      </div>
-    </div>
+    <script>
 
-  </div>
-
+    </script>
 </body>
 </html>

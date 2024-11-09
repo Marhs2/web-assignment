@@ -42,7 +42,7 @@ $loginBtn.addEventListener("click", () => {
       const userInfo = user[element];
       if ($email.value == userInfo.name) {
         if ($psw.value == userInfo.psw)
-          window.location = "http://127.0.0.1:5500/index.html";
+          window.location = "../index.html";
       } else {
         console.log('실패');
       }

@@ -78,7 +78,8 @@ nav > ul > li > a:hover:before{
   height: 500px;
   border-radius: 10px;
   margin: 5% auto;
-  background-color: #ccf7b1;
+  background-color: white;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.384);
 }
 
 
@@ -107,12 +108,19 @@ nav > ul > li > a:hover:before{
 }
 
 
+
 .form{
   margin-top: 10%;
+  margin: 10% auto; 
 }
 
 .form a{
+  color: white;
   margin: 10% auto; 
+}
+
+.form a:hover{
+  transform: translateY(-5px);
 }
 
 .form .btnDes{
@@ -120,13 +128,10 @@ nav > ul > li > a:hover:before{
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-  background-color: #a9ee7f;
+  background-color: #34d399;
   transition: .3s;
 }  
 
-.form .btnDes:hover{
-  background-color: #c2ff9c;
-}  
 
 .ad{
   position: absolute;
@@ -206,7 +211,7 @@ nav > ul > li > a:hover:before{
 
 
 
-.gotosign{
+.form a:last-child{
   text-decoration: underline;
   color: blue;
   margin-top: 0;
