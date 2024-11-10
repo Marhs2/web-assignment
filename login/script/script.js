@@ -15,8 +15,8 @@ const $slideToLogin = $('.gotologin')
 const $ad = $(".ad");
 
 const user = JSON.parse(localStorage.getItem('user')) || {
-  user1: { name: "정동일",psw: "wjdehddlf"},
-  user2: { name: "마석두", psw: "aktjren",},
+  user1: { name: "정동일", psw: "wjdehddlf" },
+  user2: { name: "마석두", psw: "aktjren", },
 };
 
 if (!localStorage.getItem("user")) {
@@ -34,52 +34,49 @@ let $rlfdl = $userInformation.length + 1;
 let $userNumber = `user${$rlfdl}`;
 
 $loginBtn.addEventListener("click", () => {
-
-  if(!$email.value.trim() || !$psw.value.trim()){
+  if (!$email.value.trim() || !$psw.value.trim()) {
     alert("아이디 또는 비밀번호를 입력해주세요")
-  }else{
+  } else {
     Object.keys(JSON.parse(localStorage.getItem("user"))).forEach((element) => {
       const userInfo = user[element];
       if ($email.value == userInfo.name) {
         if ($psw.value == userInfo.psw)
           window.location = "../index.html";
-      } else {
-        console.log('실패');
+      }else{
+        console.log('로그인 실패');
       }
     });
   }
-  
-  
 });
 
 $signinBtn.addEventListener("click", () => {
   $rlfdl = Object.keys(user).length + 1;
   $userNumber = `user${$rlfdl}`;
 
-  if(!$signEmail.value.trim() || !$signPsw.value.trim()){
+  if (!$signEmail.value.trim() || !$signPsw.value.trim()) {
     alert("아이디 또는 비밀번호를 입력해주세요")
-  }else{
+  } else {
     user[$userNumber] = {
       name: `${$signEmail.value}`,
       psw: `${$signPsw.value}`,
     };
-  
+
     console.log(Object.keys(user).length);
-  
+
     console.log($userNumber);
-  
-    
+
+
     $userInformation = localStorage.getItem('user')
-  
+
     localStorage.setItem("user", JSON.stringify(user));
 
     alert("회원가입 성공!")
     $signEmail.value = ""
-  
+
     $signPsw.value = ""
   }
 
-``
+  ``
 });
 
 
@@ -88,16 +85,18 @@ let slide = 0;
 
 
 
-$slideToSign.addEventListener('click',()=>{
-  $ad.animate([{ transform: "translateX(-500px)"}],  {
+$slideToSign.addEventListener('click', () => {
+  $ad.animate([{ transform: "translateX(-500px)" }], {
     duration: 500,
-    fill: "forwards",})
+    fill: "forwards",
+  })
 })
 
-$slideToLogin.addEventListener('click',()=>{
-  $ad.animate([{ transform: "translateX(0)"}], {
+$slideToLogin.addEventListener('click', () => {
+  $ad.animate([{ transform: "translateX(0)" }], {
     duration: 500,
-    fill: "forwards",})
+    fill: "forwards",
+  })
 })
 
 
