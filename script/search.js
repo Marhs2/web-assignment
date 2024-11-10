@@ -84,7 +84,7 @@ function bookCreat() {
         } else {
 
           $newBook.innerHTML = `
-          <img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari">
+          <img src="../images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari">
           <div class="price-about">
             <h2 class="book-title">${$bookInfo.name}</h2>
             <p>${$bookInfo.price}원</p>

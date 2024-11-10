@@ -41,7 +41,7 @@ $loginBtn.addEventListener("click", () => {
       const userInfo = user[element];
       if ($email.value == userInfo.name) {
         if ($psw.value == userInfo.psw)
-          window.location = "../index.html";
+          window.location = "../web-assignment/search/search.html";
       }else{
         console.log('로그인 실패');
       }

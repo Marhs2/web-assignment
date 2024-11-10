@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML</title>
-  <link rel="stylesheet" href="./css/stlye.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 & 회원가입</title>
+  <link rel="stylesheet" href="../web-assignment/css/login.css">
 </head>
-
 <body>
   <header>
     <a href="#"><svg id="svg-id-0-nxid1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -17,102 +15,70 @@
       </svg></a>
     <nav>
       <ul>
-        <li><a href="#">도서</a></li>
-        <li><a href="./bestSeller/bestSeller.html">베스트셀러</a></li>
-        <li><a href="./login/login.html">로그인</a></li>
+        <li><a href="../web-assignment/search/search.html">도서</a></li>
+        <li><a href="../web-assignment/bestSeller/bestSeller.html">베스트셀러</a></li>
+        <li><a href="../web-assignment/index.html">로그인</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="selecter">
-
-      <div class="book-search-section">
-        <input type="text" id="book-search" placeholder="도서 검색...">
-      </div>
-
-      <div class="select-stlye">
-        <div class="Genre">
-          <h2>책 장르</h2>
-          <div class="Gener-radio">
-            <div>
-              <input type="radio" class="adven" name="Genre" id="fan" />
-              <label for="fan">판타지</label>
-            </div>
-            <div>
-              <input type="radio" class="coding" name="Genre" id="coding" />
-              <label for="coding">코딩</label>
-            </div>
-            <div>
-              <input type="radio" class="dis" name="Genre" id="dis" />
-              <label for="dis">디스토피아</label>
-            </div>
-          </div>
-
-        </div>
-        </div>
-      </div>
-      <div class="add-book">
-        <a href="#">책 추가하기</a>
-      </div>
-    </section>
-
-
-    <section class="books-content">
-
-      <div class="book">
-          <img src="./images/Book-img/해리_포터와_마법사의_돌_표지.jpg" alt="hari">
-          <div class="price-about">
-            <h2 class="book-title">해리포터</h2>
-            <p>10,000원</p>
-            <span class="genreName">판타지</span>
-          </div>
-      </div>
-
-
-
-
-    </section>
-  </main>
-
   <div class="layer">
-    <div>
-      <h1>책 추가</h1>
-      <article class="book-about">
-        <div>
-          <label for="book-name">책 이름</label>
-          <input type="text" id="book-name" name="book-name" >
+    <div class="login">
+        
+        
+        <div class="form">
+          <h1>로그인</h1>
+
+          <div>
+            <input type="email" id="email" placeholder="이메일 또는 아이디">
+          </div>
+          
+          <div>
+            <input type="password" id="psword" placeholder="비밀번호">
+          </div>
+    
+          <div>
+            <a href="#" class="loginBtn btnDes">로그인</a>
+            <a href="#" class="gotosign">회원가입하기</a>
+          </div>
+          
         </div>
+    </div>
+
+
+    
+
+    <div class="signin">
+      <div class="form">
+        <h1>회원가입</h1>
+        
         <div>
-          <label for="book-price">책 가격</label>
-          <input type="number" id="book-price" >
+          <input type="email" id="signinemail" placeholder="이메일 또는 아이디">
         </div>
         
         <div>
-          <label for="book-gen">책 장르</label>
-          <article class="add-book-gener" >
-            <div>
-              <label for="adven-AddBook">판타지</label>
-              <input type="radio" name="book-Gener" id="adven-AddBook">
-            </div>
-            
-            <div>
-              <label for="coding-AddBook">코딩</label>
-              <input type="radio" name="book-Gener" id="coding-AddBook">
-            </div>
-            
-            <div>
-              <label for="dis-AddBook">디스토피아</label>
-              <input type="radio" name="book-Gener" id="dis-AddBook">
-            </div>
-          </article>
+          <input type="password" id="signinpsword" placeholder="비밀번호">
         </div>
-      </article>
-      <button class="add">추가</button>
-      <button class="close">닫기</button>
-    </div>
-  </div>
-  <script src="./script/script.js"></script>
-</body>
+  
+        <div>
+          <a href="#" class="signinBtn btnDes">회원가입</a>
+          <a href="#" class="gotologin">로그인하기</a>
+        </div>
 
+      </div>
+    </div>
+    
+    <div class="ad">
+      <a href="#"><img src="../web-assignment/images/홍보.png" alt="bookAd"></a>
+    </div>
+
+
+    </div>
+
+
+
+  </div>
+
+  <script src="./script/login.js"></script>
+</body>
 </html>
