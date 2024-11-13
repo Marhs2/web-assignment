@@ -231,7 +231,7 @@ function bookSearch() {
     $bookchild.forEach(books => {
       const $bookName = books.querySelector('.book-title')
       // console.log($bookSearch.children[1].value == books.children[0].children[0].textContent ? "같음" : "다름");
-      books.style.display = $bookSearch.children[1].value == $bookName.textContent ? 'flex' : 'none'
+      books.style.display = $bookSearch.children[0].value == $bookName.textContent ? 'flex' : 'none'
     });
 
   })
